@@ -1,1 +1,27 @@
-<h3>This is Home Page</h3>
+{% if user.is_authenticated %}
+<div class="alert alert-success" role="alert">
+    <h3>ยินดีต้อนรับ {{ user.username }}</h3>
+    <a 
+        style="text-decoration: none; color: red;" 
+        href="{% url 'logout' %}"
+    >
+    ออกจากระบบ
+    </a>
+</div>
+{% else %}
+<div class="alert alert-success" role="alert">
+    <h3>ยินดีต้อนรับ</h3>
+    <a 
+        style="text-decoration: none; color: navy;" 
+        href="{% url 'register' %}"
+    >
+    ลงทะเบียนที่นี่
+    </a>
+    <a 
+        style="text-decoration: none; color: brown;" 
+        href="{% url 'login' %}"
+    >
+    เข้าสู่ระบบ
+    </a>
+</div>
+

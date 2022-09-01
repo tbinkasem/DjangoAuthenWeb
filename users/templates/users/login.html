@@ -1,0 +1,16 @@
+<h3>เข้าสู่ระบบ</h3>
+<hr color="green">
+<form action="" method="post">
+    {% csrf_token %}
+    {% for field in form %}
+    <div>
+        <p>
+            {{ field.label }} :
+            <br>
+            {{ field }}
+        </p>
+    </div>
+    {% endfor %}
+    <button type="submit">เข้าสู่ระบบ</button>
+    <p>คุณยังไม่ลงทะเบียนใช่ไหม?, <a href="{% url 'register' %}">ลงทะเบียนที่นี่</a></p>
+</form>

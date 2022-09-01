@@ -1,0 +1,12 @@
+{% extends 'users/base.html' %}
+{% block content %}
+
+    <br>
+    <div class="alert alert-success" role="alert">
+        <h2 style="text-align: center;">ออกจากระบบ</h2>
+    </div>
+    <h3>เข้าสู่ระบบ อีกครั้ง?</h3>
+    <a style="text-decoration: none; color: blue;" href="{% url 'login' %}"> ---> เข้าสู่ระบบ</a><br>
+    <a style="text-decoration: none; color: limegreen" href="{% url 'home' %}"> [<< กลับไปหน้าแรก >>] </a>
+
+{% endblock content %}
